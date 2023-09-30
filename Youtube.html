@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Youtube.com clone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+     <style>
+       p {
+       margin-top: 0px;
+       margin-bottom: 0px;
+       font-family: roboto,arial;
+       
+    }
+      body{
+        font-family: roboto,arial;
+        margin: 0px;
+        padding-top: 80px;
+        padding-left: 100px;
+    } 
+    .thumbnail-row {
+       position: relative;
+      
+    }
+    .thumbnails {
+       width: 100%;
+       position: relative;
+    }
+    .Time-count {
+       background-color: black;
+       font-family: roboto,arial;
+       font-size: 12px;
+       padding-top: 2px;
+       padding-bottom: 2px;
+       padding-right: 4px;
+       padding-left: 4px;
+       color: white;
+       position: absolute;
+       bottom: 8px;
+       right:5px;
+
+     }
+    .video-title {
+        margin-bottom: 12px;
+        font-weight: 500px;
+    }
+    .video-author {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .video-stats {
+       font-size: 14px;
+       margin-bottom: 12px;
+    }
+    .channel-picture {
+        width: 50px; 
+        display: inline-block;
+    }
+    .profile-picture {
+       width: 30px;
+       border-radius: 20px;
+    }
+    .video-info {
+       display: inline-block;
+ 
+    }
+   .video-information {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 40px;
+    }
+    @media{max-width: 750px} {
+      .video-grid {
+        grid-template-columns : 1fr 1fr;
+      }
+    }
+    @media {min-width: 751px;} and {max-width: 999px;} {
+      .video-grid {
+        grid-template-columns:  1fr 1fr 1fr;
+      }
+    }
+    @media {min-width: 1000px;} {
+      .video-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+    .search-box {
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 14px;
+      border-style: solid;
+      margin-top: 15px;
+      margin-right: 16px;
+      margin-bottom: 14px;
+      cursor: pointer;
+    }
+    .google-info {
+       display: inline-block;
+    }
+    .google-search {
+      background-color: rgb(60, 60, 240);
+      border: none;
+      color: white;
+      cursor: pointer;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+    .google-search:hover{
+      box-shadow:inset 5 5 10 rgba(197, 6, 6,0.15);
+    }
+    .google-see {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .feeling-lucky {
+      text-align: center;
+    }
+    .Email-box {
+      border-color: brown;
+      border-style: solid;
+      border-radius: 4px;
+      display: block;
+      margin-top: 16px;
+      margin-bottom: 12px;
+    }
+    .mail-text {
+      margin-bottom: 12px;
+    }
+    .agree-join {
+      background-color: rgb(54, 54, 226);
+      color: white;
+      border: none;
+    }
+    .mail-info {
+      display: block;
+      margin-left: 20px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    .channel-picture1 {
+      width: 50px; 
+      display: inline-block;
+      vertical-align: center;
+    }
+    .profile-picture1 {
+     width: 30px;
+     border-radius: 20px;
+     vertical-align: center;
+    }
+    .tweet-info {
+      display: inline-block;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      vertical-align: top;
+    }
+    .Tweet-button{
+      display: inline-block;
+      vertical-align: center;
+    }
+    .Channel-info {
+      vertical-align: center;
+      display: inline-block;
+      display: grid;
+      grid-template-columns: 0fr 0fr 0fr;
+    }
+    .name-button{
+      display: block;
+      margin-bottom: 12px;
+    }
+    .box-email {
+      display: block;
+      margin-bottom: 12px;
+    }
+    .customer-text {
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .google-picture {
+      display: inline-block;
+      margin-left: 30px;
+    }
+    .First-name{
+      display: inline-block;
+      margin-right: 18px;
+      margin-bottom: 12px;
+    }
+    .second-name {
+      display: inline-block;
+    }
+    .sign-button {
+      margin-top: 12px;
+      ackground-color: rgb(43, 43, 198);
+      color: white;
+      border-style: none;
+      height: 30px;
+      width: 100px;
+      border-radius: 5px;
+      margin-bottom: 12px;
+    }
+    .Request-ride {
+      margin-bottom: 12px;
+    }
+    .pick-up {
+      display: block;
+      margin-bottom: 12px;
+    }
+    .Destination {
+      margin-bottom: 12px;
+    }
+    .Request-button {
+      margin-bottom: 12px;
+      background-color: rgb(38, 32, 32);
+      color: white;
+      display: inline-block;
+    }
+    .next-trip {
+      background-color: gray;
+      border-style: solid;
+      display: inline-block;
+      vertical-align: center;
+      margin-bottom: 14px;
+    }
+    .div-example {
+      height: 80px;
+      width: 80px;
+      border: 1px;
+      border-style: solid;
+      background-color: red;
+      vertical-align: center;
+      display: inline-block;
+    }
+    .div-example2 {
+      height: 80px;
+      width: 80px;
+      background-color:green;
+      border-radius:40px;
+      display: inline-block;
+      margin-left: 12px;
+      vertical-align: top;
+      margin-bottom: 14px;
+    }
+    .Youtube-music {
+      margin-top: 14px;
+    }
+    .Mutual-friends {
+     margin-top: 14px;
+     margin-right: 14px;
+    }
+    .picture-info {
+     width: 50px;
+     border-radius: 20px;
+     vertical-align: middle;
+     display: inline-block;
+
+
+    }
+    .cat-pic {
+     vertical-align: middle;
+     width: 50px;
+     border-radius: 30px;
+     display: inline-block;
+    }
+    .profile-info {
+     display: inline-block;
+     width: 50px;
+    }
+    .what-happening {
+     display: inline-block;
+     margin-right: 20px;
+     margin-bottom: 20px;
+    }
+    .twe-et {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .profile-picture2 {
+     width: 100%
+
+    }
+    .na-me {
+     display: block;
+    }
+    .Mutual-display {
+     display: block;
+     margin-top: 14px;
+     margin-left: 14px;
+     margin-bottom: 15px;
+    }
+    .Mutual-friends {
+     margin-top: 10px;
+     margin-bottom: 15px;
+    }
+    .add-friends {
+
+    }
+    .picture-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     column-gap: 20px;
+     row-gap: 40px;
+     align-items: center;
+    }
+    .header {
+      display: flex;
+      flex-direction: row;
+      height: 55px;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 100;
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+       height: 60px;
+
+      background-color: white;
+      border-bottom: 1px solid rgb(158, 158, 158);;
+  
+    }
+    .left-section {
+     width: 155px;
+     display: flex;
+     align-items: center;
+    }
+    .icon-humburger-menu {
+     height: 24px;
+     margin-right: 14px;
+     margin-left: 14px;
+    }
+    .youtube-logo1 {
+     height: 40px;
+     width: 24;
+     border: none;
+    }
+    .middle-section {
+     flex: 1;
+     margin-left: 200px;
+     margin-right: 100px;
+      display: flex;
+     align-items: center;
+     border: 1px; 
+    }
+    .search-bar {
+     flex: 1;
+     height: 37px;
+     border-width: 1px;
+     border-color: rgb(182, 182, 182);
+     border-style: solid;
+     width: 0;
+   }
+   .search-bar::placeholder {
+    font-family: roboto,arial;
+    font-size: 24px;
+    color: rgb(109, 109, 109);
+    font-weight: 500;
+    padding-left: 14px;;
+  
+   }
+   .search-icon-button {
+  background-color: rgb(253, 253, 253);
+  height: 41px;
+  width: 80px;
+  border-width: 1px;
+  border-color: rgb(150, 150, 150);
+  padding-right: 14px;
+  margin-left: -1px;
+  border-style: solid;
+  position: relative;
+}
+.search-icon-button .tooltip,
+.voice-search-button .tooltip,
+.video-upload-tooltip .tooltip,
+.notification-icon-container .tooltip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgb(98, 98, 98);
+  color: white;
+  bottom: -25px;
+  padding: 4px 8px;
+  border-radius: 2px;
+  opacity: 0;
+  transition:opacity 0.15s;
+  pointer-events: none;
+}
+.search-icon-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.video-upload-tooltip:hover .tooltip,
+.notification-icon-container:hover .tooltip {
+  opacity: 1;
+}
+.search-icon {
+  height: 20px;
+  color: rgb(174, 174, 174);
+  padding-top: 4px;
+  padding-right: 5px;
+}
+.voice-search-button  {
+  background-color: rgb(182, 182, 182);
+  height: 40px;
+  margin-left: 14px;
+  border-radius: 21px;
+  border: none;
+}
+  
+.voice-search {
+  height: 30px;
+  padding-top: 4px;
+  border: none;
+}
+.right-section {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  justify-content: space-between;
+  flex-shrink: 0;
+  margin-right: 100px;
+  
+
+}
+.video-upload {
+  height: 24px;
+}
+.video-upload-tooltip{
+  position: relative;
+} 
+
+.notification-icon {
+  height: 24px;
+}
+.notification-icon-container {
+  position: relative;
+}
+.notification-count {
+  background-color: rgb(236, 0, 0);
+  color: white;
+  width: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+.current-profile-pictuure {
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.prifile-picture2 {
+  position: relative;
+}
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 60px;
+  width: 75px;
+  cursor: pointer;
+  z-index: 200;
+}
+.side-bar:hover {
+  background-color: rgb(220, 220, 220);
+}
+.side-bar-icons {
+  height:28px;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.side-bar-container {
+  margin-bottom: 20px;
+}
+    
+     </style>
+     
+
+   
+  </head>
+  <body style="padding-bottom: 2000px ;">
+
+
+    <header class="header">
+      <div class="left-section">
+        <img class="icon-humburger-menu" src="icons/humburger menu.png">
+        <img class="youtube-logo1" src="icons/youtube logo 1.png">
+      </div>
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-icon-button">
+          <img class="search-icon" src="icons/search icon.png">
+          <div class="tooltip">Search</div>
+        </button>
+        <button class="voice-search-button">
+          <img class="voice-search" src="icons/voice icon.jpg">
+          <div class="tooltip">voice</div>
+        </button>
+      </div>
+      <div class="right-section">
+        <div class="video-upload-tooltip"> 
+          <img class="video-upload" src="icons/video appload.png">
+          <div class="tooltip">create</div>
+        </div>
+       
+        <div class="notification-icon-container">
+          <img class="notification-icon" src="icons/notification.png">
+          <div class="tooltip">notification</div>
+          <div class="notification-count">
+            4
+          </div>
+        </div>
+        
+          <img class="current-profile-pictuure" src="Channel pictures/my current profile.jpg">
+        </div>
+    </header>
+
+    <nav class="side-bar">
+      <div class="side-bar-container">
+        <img class="side-bar-icons" src="icons/home.png">
+        <div class="paragraphs">Home</div>
+      </div>
+      <div class="side-bar-container">
+        <img class="side-bar-icons" src="icons/shorts.png">
+        <div class="paragraphs">Shorts</div>
+      </div>
+      <div class="side-bar-container">
+        <img class="side-bar-icons" src="icons/subscription.png">
+        <div class="paragraphs">subscriptions</div>
+      </div>
+      <div class="side-bar-container">
+        <img class="side-bar-icons" src="icons/library.png">
+        <div class="paragraphs">Library</div>
+      </div>
+      <div class="side-bar-container">
+        <img class="side-bar-icons" src="icons/history.png">
+        <div class="paragraphs">Watch later</div>
+      </div>
+      <div class="side-bar-container">
+        <img class="side-bar-icons" src="icons/your videos.png">
+        <div class="paragraphs">Your videos</div>
+      </div>
+    </nav>
+
+    <main class="video-picture-grid">
+      <section class="video-grid">
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img class="thumbnails" src="thumbnails/thumbnail-1.webp">
+            <div class="Time-count">2:34:34</div>
+          </div>
+          <div class="video-information">
+            <div class="channel-picture">
+              <img class="profile-picture" src="Channel pictures/Channel picture.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                0.6.09.2023-Brasilia Healing Service [The Federal District]-Prophet Dr.David Owuor
+              </p>
+          
+              <p class="video-author">
+                akongamini
+              </p>
+          
+              <p class="video-stats">
+                3k views&#183; 6 days ago
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img class="thumbnails" src="thumbnails/hqdefault_live.webp">
+            <div class="Time-count">5:30</div>
+          </div>
+          <div class="video-information">
+            <div class="channel-picture">
+              <img class="profile-picture" src="Channel pictures/metro.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                THE NAIROBI METRO CRUSADE AND WORSHIP EXTRAVAGANZA
+              </p>
+          
+              <p class="video-author">
+               YAYA KILIMANI ALTAR
+              </p>
+          
+              <p class="video-stats">
+                177 watching
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img class="thumbnails" src="thumbnails/huruma.webp">
+            <div class="Time-count">4:45</div>
+          </div>
+          <div class="video-information">
+            <div class="channel-picture">
+              <img class="profile-picture" src="Channel pictures/channels4_profile.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                HURUMA MAIN ALTAR NAIROBI WORSHIP Leading by overseer Marry Lilian
+              </p>
+          
+              <p class="video-author">
+                Sharon Shicheti
+              </p>
+          
+              <p class="video-stats">
+                154 views&#183;4months ago
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img class="thumbnails" src="thumbnails/mamabishop.webp">
+            <div class="Time-count">6:25</div>
+          </div>
+          <div class="video-information">
+            <div class="channel-picture">
+              <img class="profile-picture" src="Channel pictures/channels4_profile (1).jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                NAIROBI METROPOLIS WOMEN CONFERENCE AT KENYATTA UNIVERISTY
+              </p>
+          
+              <p class="video-author">
+                The PEEF
+              </p>
+          
+              <p class="video-stats">
+                119 views&#183; Steamed 1 year ago
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img class="thumbnails" src="thumbnails/kutv1.webp">
+            <div class="Time-count">3:90</div>
+          </div>
+          <div class="video-information">
+            <div class="channel-picture">
+              <img class="profile-picture" src="Channel pictures/kutv.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                KUTV LIVE // PRIME TIME NEWS
+              </p>
+          
+              <p class="video-author">
+                KUTV Kenya
+              </p>
+          
+              <p class="video-stats">
+                83 views&#183; Streamed 7 days ago
+              </p>
+  
+              <p>
+                KUTV is a kenya Television that brings you upto date News,entertaining,educative and informative programme
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img class="thumbnails" src="thumbnails/citizen tv.webp">
+            <div class="Time-count">4:39</div>
+          </div>
+          <div class="video-information">
+            <div class="channel-picture">
+              <img class="profile-picture" src="Channel pictures/citizen.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                / NEWS GANG / Tax after tax: Inside new government revenue collection plan
+              </p>
+          
+              <p class="video-author">
+                Citizen TV kenyan&#10003;
+              </p>
+          
+              <p class="video-stats">
+                28k views&#183; 1 day ago
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <input class="search-box" type="text" placeholder="search">
+  
+      <div class="google-info">
+        <div class="google-picture">
+          <div>
+            <img src="Channel pictures/google.png">
+          </div>
+          <div>
+            <button class="google-search">
+              Search Google or Type URL
+            </button>
+          </div>
+          <div class="google-see">
+            <input type="text" placeholder="Google Search">
+          </div>
+          <div class="feeling-lucky">
+            <input type="text" placeholder="I'm feeling lucky">
+          </div>
+        </div>
+      </div>
+  
+      
+  
+      <div class="mail-info">
+        <input class="Email-box" type="text" placeholder="Email">
+  
+      <p class="mail-text">
+        By clicking Agree $ join, you agree to the privacy policy
+      </p>
+  
+      <button class="agree-join">
+        Agree $ Join
+      </button>
+      </div>
+      <div class="pofile-info">
+        <div class="picture-info">
+          <img class="cat-pic" src="thumbnails/2dc1b8bc79759d42b627707a64db9b5eb1.jpg">
+        </div>
+        <div class="what-happening">
+          
+          <p>
+            what is happening?
+          </p>
+        </div>
+        <div class="twe-et">
+          <button>
+            Tweet
+          </button>
+      
+        </div>
+      </div>
+          
+      <input class="name-button" type="text" placeholder="Name">
+  
+      <input class="box-email" type="text" placeholder="Email">
+  
+      <p class="customer-text">
+        Thanks for chatting with one of our customer support .would you like to take our quick survey?
+      </p>
+  
+      <button>
+        Yes
+      </button>
+  
+      <button>
+        No
+      </button>
+      <div>
+        <div class="First-name">
+          <input type="text" placeholder="First Name">
+        </div>
+        <div class="second-name">
+          <input type="text" placeholder="Last Name">
+        </div>
+        <div>
+          <input type="text" placeholder="Email">
+        </div>
+      </div>
+      <button class="sign-button">
+        Sign up
+      </button>
+      <div>
+        <div>
+          <p class="Request-ride">
+            Request aride now
+          </p>
+        </div>
+        <div class="pick-up">
+          <input type="text" placeholder="Enter Pick up Location">
+        </div>
+        <div class="Destination">
+          <input type="text" placeholder="Enter Destination">
+        </div>
+        <div>
+          <button class="Request-button">
+            Request now
+          </button>
+        </div>
+        <div>
+          <button class="next-trip">
+            Schedule for later
+          </button>
+        </div>
+      </div>
+  
+      <div class="div-example">
+        THIS IS ADIV
+      </div>
+      <div class="div-example2">
+        green circle
+      </div>
+      <div>
+        <p>
+          Satisfied with our service?
+        </p>
+        <button>Yes</button>
+        <button>No</button>
+      </div>
+  
+      <div class="Youtube-music">
+        <p>
+          Install Youtube Music
+        </p>
+        <p>
+          Add Youtube music to your desktop quick and easy access
+        </p>
+      </div>
+  
+      <div class="picture-grid">
+        <div class="Mutual-display">
+          <img class="profile-picture2" src="thumbnails/2dc1b8bc79759d42b627707a64db9b5eb1.jpg"
+          <p class="na-me">
+            Oliver
+          </p>
+          <p class="Mutual-friends">
+            2 Mutual friends
+          </p>
+          <button class="add-friends">
+            Add friends
+          </button>
+        </div>
+    
+        <div class="Mutual-display">
+          <img class="profile-picture2" src="thumbnails/helicopter.jpg"
+          <p>comabasiege&#183;com</p>
+          <p class="na-me">
+          
+          </p>
+          <p class="Mutual-friends">
+            You Will never turn off your computer again&#183;No Instal&#183;Play for free
+          </p>
+          <button class="add-friends">
+            Ad
+          </button>
+        </div>
+    
+        <div class="Mutual-display">
+          <img class="profile-picture2" src="thumbnails/th.jpg"
+          <p class="na-me">
+            THE CHOSUNILBO&#183;12h
+          </p>
+          <p class="Mutual-friends">
+            Korean Signs MOU for Pstwar Reconstruction in Ukraine
+          </p>
+          <button class="add-friends">
+            Add friends
+          </button>
+        </div>
+    
+        <div class="Mutual-display">
+          <img class="profile-picture2" src="thumbnails/th (1).jpg"
+          <p class="na-me">
+            Showbizz Daily [English]&#183;19h
+          </p>
+          <p class="Mutual-friends">
+            Queen Elizabeth 11:her life in photos ,ayear after her death
+          </p>
+          <button class="add-friends">
+            Add friends
+          </button>
+        </div>
+    
+        <div class="Mutual-display">
+          <img class="profile-picture2" src="thumbnails/th (2).jpg"
+          <p class="na-me">
+            Tuko&#183;9h
+          </p>
+          <p class="Mutual-friends">
+            Viral:Kenyan TikToker Stirs Buzz after Spending Hours Preparing Meal for Hubby
+          </p>
+          <button class="add-friends">
+            Add friends
+          </button>
+        </div>
+    
+        <div class="Mutual-display">
+          <img class="profile-picture2" src="thumbnails/th (4).jpg"
+          <p class="na-me">
+            THE CHOSUNILBO&#183;11h
+          </p>
+          <p class="Mutual-friends">
+           Hyundai Electric Cars Promote Busan's Expo Bid in New York
+          </p>
+          <button class="add-friends">
+            Add friends
+          </button>
+        </div>
+    
+        <div class="Mutual-display">
+          <img class="profile-picture2" src="thumbnails/th (5).jpg"
+          <p class="na-me">
+            Autocar&#183;1hr
+          </p>
+          <p class="Mutual-friends">
+            The safest Carson sale Today
+          </p>
+          <button class="add-friends">
+            Add friends
+          </button>
+        </div>
+    
+        <div class="Mutual-display">
+          <img class="profile-picture2" src="thumbnails/th (6).jpg"
+          <p class="na-me">
+          The Daily Digest&#183;10h
+          </p>
+          Robotaxis are now a reality in San Francisco,but not everyone is thrilled
+          </p>
+          <button class="add-friends">
+            Add friends
+          </button>
+        </div>
+    
+        <div class="Mutual-display">
+          <img class="profile-picture2" src="thumbnails/th (7).jpg"
+          <p class="na-me">
+           Romania Insider &#183;10h
+          </p>
+          <p class="Mutual-friends">
+            Romania tellls OMV there is no reason to amend Offshore Law
+          </p>
+          <button class="add-friends">
+            Add friends
+          </button>
+        </div>
+      </div>
+  
+      <div type="">
+        <div class="background-color:
+        lightblue">
+          200px
+        </div>
+        <div class="background-color:
+       lightpink">75px</div>
+      </div>
+    </main>
+  </body>
+</html>

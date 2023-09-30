@@ -1,0 +1,9 @@
+.model-text{
+  font-family: montserrat;
+  color: black;
+}
+.delivery-text{
+  text-decoration: underline;
+  font-family: montserrat;
+  color: red;
+}

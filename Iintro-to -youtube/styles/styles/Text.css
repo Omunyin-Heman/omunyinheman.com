@@ -1,0 +1,125 @@
+p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  
+  
+}
+
+
+.Text-title{
+  font-family: tahoma;
+  color: black;
+  margin-bottom: 14px;
+  
+}
+
+.text-advert{
+  font-family: arial;
+  color: green;
+  margin-top: 14px;
+}
+
+.sales-text{
+  font-family: arial;
+  color: red;
+}
+
+.verdana-text{
+  font-family: verdana;
+  color: pink;
+  margin-top: 14px;
+}
+
+.pro-text{
+  font-family: verdana;
+  margin-bottom: 10px;
+}
+
+.text-description{
+  font-family: Verdana;
+}
+
+.shopping-text{
+  font-family: arial;
+}
+
+.apple-text{
+  font-family: arial;
+  
+}
+.learn-text{
+  font-family: arial;
+  color: red;
+  
+}
+
+.start-button{
+  background-color: blue;
+  color: white;
+  text-align: center;
+  border-style: solid;
+  margin-top: 15px;
+  margin-left: 920px;
+  margin-bottom: 14px;
+  border-radius: 2px;
+
+}
+
+.mac-text{
+  font-family: arial;
+}
+
+.supper-text{
+  font-family: arial;
+}
+
+.price-text{
+  font-family: arial;
+  margin-bottom: 14px;
+
+}
+
+.buy-button{
+  background-color: blue;
+  color: white;
+  border-style: solid;
+  border: none;
+  margin-left: 925px;
+  margin-bottom: 14px;
+  border-radius: 2px;
+}
+
+.usd-text{
+  font-family: arial;
+}
+
+.today-text{
+  font-family: arial;
+  color: green;
+}
+
+.hours-text{
+font-family: arial;
+color: gray;
+}
+
+.percentage-text{
+font-family: arial;
+color: red;
+
+}
+.camp-text{
+font-family: arial;
+}
+.freecode-text{
+color: black;
+font-weight: bold;
+}
+.free-text{
+color: gray;
+}
+
+.skills-text{
+margin-top: 20px;
+}

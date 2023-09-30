@@ -1,0 +1,84 @@
+.ubber-button{
+  border-color:white;
+  border:2px;
+  background-color: black;
+  color:white;
+  cursor:pointer;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+}
+
+.ubber-button:hover{
+  opacity: 0.15;
+  
+}
+
+.amazon-button{
+  background-color:pink;
+  cursor:pointer;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+}
+
+.Github-button{
+  cursor:pointer;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.Github-button:hover{
+  box-shadow: 0 0 0 black;
+}
+
+.bootstrap-button{
+  cursor:pointer;
+  background-color:rgb(121, 82, 179);
+  color:blue;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+
+}
+
+.bootsrap1-buttton{
+  cursor:pointer;
+  background-color: rgb(108, 102, 194);
+  color:white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.linkedin-button{
+  cursor:pointer;
+  background-color: rgb(10, 102, 194);
+  border-width: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.linkedin-button1{
+  cursor:pointer;
+  background-color: greenyellow;
+  border-width: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  
+}
+.linkedin-button1:hover{
+  box-shadow: 10 10 10 black;
+}

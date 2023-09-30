@@ -1,0 +1,117 @@
+p{
+  margin-bottom:0;
+}
+
+.amazon-title{
+  text-decoration:underline;
+  color:rgb(0, 133, 133);
+  margin-bottom:10px;
+
+}
+
+.Nike-shoe{
+  color:black;
+  font-weight:bold;
+  margin-top:10px;
+  margin-bottom:5px;
+}
+
+.price-text{
+  margin-top:5px;
+  color:rgb(0, 118, 0);
+
+}
+
+.delivery-text{
+  color:rgb(255, 216, 20);
+  margin-top:5px;
+  margin-bottom:10px;
+}
+
+.cart-button{
+  background-color:rgb(255, 164, 28);
+}
+
+.buy-button{
+  background-color: rgb(255, 164, 28);
+}
+
+.amazon-link{
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
+.Back-button{
+  background-color: green;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.one-button{
+  display: inline-block;
+ }
+ .next-button{
+  background-color: green;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+ }
+ .stretch-button{
+  background-color: green;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+ }
+
+ .shadow-button{
+  background-color: green;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+ }
+
+ .shadow-button:hover{
+  background-color: pink;
+  color: green;
+  cursor: pointer;
+ }
+ .shadow-button:active{
+  background-color: red;
+  color: black;
+  cursor: pointer;
+ }
+
+ .one-button{
+  background-color: green;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-left: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 6px;
+  padding-left: 6px;
+ }
+ .two-button{
+  background-color: green;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-left: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 6px;
+  padding-left: 6px;
+ }
+ .three-button{
+  background-color: green;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-left: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 6px;
+  padding-left: 6px;
+ }
